@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Солнце",
+    "constellation": "Нет",
+    "is_visible": true,
+    "radius": 1.0
+  },
+  {
+    "id": 2,
+    "name": "Сириус",
+    "constellation": "Большой пес",
+    "is_visible": true,
+    "radius": 1.71
+  },
+  {
+    "id": 3,
+    "name": "Бетельгейзе",
+    "constellation": "Орион",
+    "is_visible": true,
+    "radius": 887.0
+  },
+  {
+    "id": 4,
+    "name": "Процион",
+    "constellation": "Малый Пес",
+    "is_visible": true,
+    "radius": 2.05
+  },
+  {
+    "id": 5,
+    "name": "Ригель",
+    "constellation": "Орион",
+    "is_visible": true,
+    "radius": 78.9
+  }
+]
