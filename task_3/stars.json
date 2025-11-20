@@ -33,12 +33,5 @@
     "constellation": "Орион",
     "is_visible": true,
     "radius": 78.9
-  },
-  {
-    "id": 8,
-    "name": "fd",
-    "constellation": "d",
-    "is_visible": true,
-    "radius": 243.0
   }
 ]
