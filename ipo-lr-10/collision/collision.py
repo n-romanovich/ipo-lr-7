@@ -25,3 +25,16 @@ def isCollisionRect(rect_one, rect_two):
         return True
     else:
         return False
+
+#Функция для вычисления площади соприкосновения прямоугольников
+def intersectionAreaRect(rect_one, rect_two):
+
+    #Проверка существуют ли прямоугольники
+    if not isCorrectRect(rect_one):
+        raise ValueError("1-й прямоугольник некорректный")
+    if not isCorrectRect(rect_two):
+        raise ValueError("2-й прямоугольник некорректный")
+
+    #Формула вычисления площади пересечения прямоугольников
+    s = (min(rect_one[1][0], rect_two[1][0]) - max(rect_one[0][0], rect_two[0][0])) * (min(rect_one[1][1], rect_two[1][1]) - max(rect_one[0][1], rect_two[0][1]))
+    return s
