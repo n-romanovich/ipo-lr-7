@@ -38,3 +38,36 @@ def intersectionAreaRect(rect_one, rect_two):
     #Формула вычисления площади пересечения прямоугольников
     s = (min(rect_one[1][0], rect_two[1][0]) - max(rect_one[0][0], rect_two[0][0])) * (min(rect_one[1][1], rect_two[1][1]) - max(rect_one[0][1], rect_two[0][1]))
     return s
+
+#Функция для обработки площади пересечения > 2 многоугольников
+def intersectionAreaMultiRect(rects):
+
+    #Проверка существуют ли прямоугольники
+    i = 0
+    for rect in rects:
+        i += 1
+        if not isCorrectRect(rect):
+            raise RectCorrectError(i)
+    
+    #Списки для координат
+    x1_list = []
+    y1_list = []
+    x2_list = []
+    y2_list = []
+
+    #Заполнение списков для координат
+    for rect in rects:
+        x1_list.append(rect[0][0])
+        y1_list.append(rect[0][1])
+        x2_list.append(rect[1][0])
+        y2_list.append(rect[1][1])
+
+    #Нахождение значений для вычисления
+    left_x   = max(x1_list)
+    bottom_y = max(y1_list)
+    right_x  = min(x2_list)
+    top_y    = min(y2_list)
+
+    #Вычисление площади пересечения
+    if left_x < right_x and bottom_y < top_y:
+        return (right_x - left_x) * (top_y - bottom_y)
